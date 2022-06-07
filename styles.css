@@ -1,0 +1,45 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #333;
+    color: white;
+}
+
+.nav-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.logo {
+    height: 40px;
+}
+
+ul {
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+.links {
+    height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+/*toggle menu class*/
+.show-links {
+    height: 10rem;
+}
