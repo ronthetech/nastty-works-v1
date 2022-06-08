@@ -1,3 +1,11 @@
+/*VARIABLES*/
+
+:root{
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*GLOBAL STYLES*/
 *,
 ::after,
 ::before {
@@ -11,17 +19,26 @@ body {
     background: #333;
     color: white;
 }
-
+nav{
+    background: #777;
+    box-shadow: var(--light-shadow);
+}
 .nav-header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* aligns items in the middle of the screen/horizontally(on x-axis) */
+    align-items:center;
     justify-content: space-between;
     padding: 1rem;
 }
+.toggle-menu{
+    font-size: 1.5rem;
+    color: hsl(205, 78%, 60%);
 
+    cursor: pointer;
+}
 .logo {
-    height: 40px;
+    /*height: 40px; UNCOMMENT WHEN YOU HAVE ADDED A LOGO/STYLED HEADER*/
+    font-size: 3rem;
 }
 
 ul {
