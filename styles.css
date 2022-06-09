@@ -1,62 +1,175 @@
-/*VARIABLES*/
+/* 
+==========
+FONTS
+==========
+*/
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+/*
+==========
+VARIABLES
+==========*/
 
-:root{
-    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+:root {
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --transition: all 0.3s linear;
 }
 
-/*GLOBAL STYLES*/
+/*
+==========
+GLOBAL STYLES
+==========
+*/
 *,
 ::after,
 ::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: sans-serif;
-    background: #333;
-    color: white;
+  font-family: sans-serif;
+  background: #222;
+  color: white;
+  font-size: 62.5%;
 }
-nav{
-    background: #777;
-    box-shadow: var(--light-shadow);
+nav {
+  background: #777;
+  box-shadow: var(--light-shadow);
 }
 .nav-header {
-    display: flex;
-    /* aligns items in the middle of the screen/horizontally(on x-axis) */
-    align-items:center;
-    justify-content: space-between;
-    padding: 1rem;
+  display: flex;
+  /* aligns items in the middle of the screen/horizontally(on x-axis) */
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
 }
-.toggle-menu{
-    font-size: 1.5rem;
-    color: hsl(205, 78%, 60%);
 
-    cursor: pointer;
+.toggle-nav {
+  font-size: 1.5rem;
+  color: forestgreen;
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
 }
-.logo {
-    /*height: 40px; UNCOMMENT WHEN YOU HAVE ADDED A LOGO/STYLED HEADER*/
-    font-size: 3rem;
+.toggle-nav:hover {
+  color: darkgreen;
+  transform: rotate(270deg);
+}
+/*.logo {
+  height: 40px; UNCOMMENT WHEN YOU HAVE ADDED A LOGO/STYLED HEADER
+  
+}*/
+.head {
+}
+.header {
+  font-family: "Permanent Marker", cursive;
+  font-size: 3rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: white;
+}
+.nav-link {
+  color: darkgreen;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+.nav-link:hover {
+  color: #333;
+  background: forestgreen;
+  padding-left: 1.5rem;
 }
 
 ul {
-    list-style-type: none;
-    text-transform: uppercase;
+  list-style-type: none;
+  text-transform: uppercase;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
-
+.socials {
+  display: none;
+}
 .links {
-    height: 0;
-    overflow: hidden;
-    transition: 0.4s;
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+  padding-right: 10rem;
 }
 
 /*toggle menu class*/
 .show-links {
-    height: 10rem;
+  height: 11rem;
+}
+
+@media screen and (min-width: 800px) {
+  .navbar {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .toggle-nav {
+    display: none;
+  }
+  /*
+  ==========
+  IMPORTANT TO ADD ELSE THE HEIGHT WILL REMAIN 224PX/14REM IN FULLSCREEN 
+  AND DISAPPEAR WHEN BUTTON IS PRESSED
+  ==========
+  */
+  .links {
+    height: auto;
+    display: flex;
+    padding-right: 10rem;
+  }
+  .nav-link {
+    padding: 0;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+  }
+  .nav-link:hover {
+    padding: 0;
+    background: transparent;
+  }
+  .socials {
+    display: flex;
+  }
+  .socials a {
+    margin: 0 0.5rem;
+    color: forestgreen;
+    transition: var(--transition);
+  }
+  .socials a:hover {
+    color: forestgreen;
+  }
+  .socials i {
+    transition: var(--transition);
+  }
+  .socials i:hover {
+    transform: translateY(-5px);
+  }
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-header {
+  font-size: 4rem;
+  color: yellow;
+  font-family: "Permanent Marker", cursive;
 }
