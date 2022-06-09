@@ -48,14 +48,14 @@ nav {
 
 .toggle-nav {
   font-size: 1.5rem;
-  color: forestgreen;
+  color: yellowgreen;
   background: transparent;
   border-color: transparent;
   transition: var(--transition);
   cursor: pointer;
 }
 .toggle-nav:hover {
-  color: darkgreen;
+  color: forestgreen;
   transform: rotate(270deg);
 }
 /*.logo {
@@ -69,10 +69,10 @@ nav {
   font-size: 3rem;
   white-space: nowrap;
   text-transform: uppercase;
-  color: white;
+  color: yellowgreen;
 }
 .nav-link {
-  color: darkgreen;
+  color: yellowgreen;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -81,8 +81,8 @@ nav {
   transition: var(--transition);
 }
 .nav-link:hover {
-  color: #333;
-  background: forestgreen;
+  color: forestgreen;
+  background: black;
   padding-left: 1.5rem;
 }
 
@@ -149,17 +149,15 @@ a {
   }
   .socials a {
     margin: 0 0.5rem;
-    color: forestgreen;
-    transition: var(--transition);
-  }
-  .socials a:hover {
-    color: forestgreen;
+    color: yellowgreen;
   }
   .socials i {
     transition: var(--transition);
   }
-  .socials i:hover {
+  .socials i:hover,
+  .socials i:focus {
     transform: translateY(-5px);
+    color: forestgreen;
   }
 }
 .main {
@@ -170,6 +168,6 @@ a {
 }
 .main-header {
   font-size: 4rem;
-  color: yellow;
+  color: yellowgreen;
   font-family: "Permanent Marker", cursive;
 }
