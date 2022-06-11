@@ -1,13 +1,10 @@
-/* 
-==========
-FONTS
-==========
-*/
+/*=========
+===FONTS===
+=========*/
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
-/*
-==========
-VARIABLES
-==========*/
+/*=============
+===VARIABLES===
+=============*/
 
 :root {
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -15,11 +12,9 @@ VARIABLES
   --transition: all 0.3s linear;
 }
 
-/*
-==========
-GLOBAL STYLES
-==========
-*/
+/*=============
+=GLOBAL STYLES=
+=============*/
 *,
 ::after,
 ::before {
@@ -27,13 +22,157 @@ GLOBAL STYLES
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: sans-serif;
   background: #222;
   color: white;
+  line-height: 1.5;
   font-size: 62.5%;
 }
+ul {
+  list-style-type: none;
+  text-transform: uppercase;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0.25rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  /*font-family: ;*/
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: forestgreen;
+  font-size: 1rem;
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/* global classes */
+
+/* main */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-header {
+  color: yellowgreen;
+  font-family: "Permanent Marker", cursive;
+  text-align: center;
+  margin-top: 15vh;
+  margin-bottom: 4rem;
+}
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+/*===========
+==QUESTIONS==
+===========*/
+.section-center {
+  max-width: 620px;
+}
+.question {
+  background: #ddd;
+  border-radius: 0.5rem;
+  box-shadow: var(--light-shadow);
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  margin-bottom: 2rem;
+}
+.question-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  padding-bottom: 1rem;
+}
+.question-title p {
+  letter-spacing: 0.25rem;
+  margin-bottom: 0;
+  color: darkgreen;
+}
+.faq-btn {
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  color: yellowgreen;
+  transition: all 0.3s linear;
+}
+.faq-btn:hover {
+  transform: rotate(90deg);
+}
+.question-text {
+  padding: 1rem 0 1.5rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.question-text p {
+  margin-bottom: 0;
+}
+/* hide text by default */
+.question-text {
+  display: none;
+}
+/*show text - class added by click of btn*/
+.show-text .question-text {
+  display: block;
+}
+/*hide minus icon by default since text is already hidden by default*/
+.minus-icon {
+  display: none;
+}
+/*show minus icon -class added by click of btn*/
+.show-text .minus-icon {
+  display: inline;
+}
+/*hide plus icon -class added by click of btn */
+.show-text .plus-icon {
+  display: none;
+}
+/*=======
+===NAV===
+=======*/
 nav {
   background: #777;
   box-shadow: var(--light-shadow);
@@ -62,8 +201,7 @@ nav {
   height: 40px; UNCOMMENT WHEN YOU HAVE ADDED A LOGO/STYLED HEADER
   
 }*/
-.head {
-}
+
 .header {
   font-family: "Permanent Marker", cursive;
   font-size: 3rem;
@@ -82,21 +220,16 @@ nav {
 }
 .nav-link:hover {
   color: forestgreen;
-  background: black;
+  background: #222;
   padding-left: 1.5rem;
 }
 
-ul {
-  list-style-type: none;
-  text-transform: uppercase;
-}
-
-a {
-  text-decoration: none;
-}
 .socials {
   display: none;
 }
+/*=====
+Hide links by default 
+=====*/
 .links {
   height: 0;
   overflow: hidden;
@@ -106,7 +239,7 @@ a {
 
 /*toggle menu class*/
 .show-links {
-  height: 11rem;
+  height: 12.5rem;
 }
 
 @media screen and (min-width: 800px) {
@@ -133,7 +266,6 @@ a {
   .links {
     height: auto;
     display: flex;
-    padding-right: 10rem;
   }
   .nav-link {
     padding: 0;
@@ -159,15 +291,4 @@ a {
     transform: translateY(-5px);
     color: forestgreen;
   }
-}
-.main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.main-header {
-  font-size: 4rem;
-  color: yellowgreen;
-  font-family: "Permanent Marker", cursive;
 }
